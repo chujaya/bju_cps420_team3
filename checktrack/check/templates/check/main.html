@@ -50,12 +50,22 @@ div {
 }
 
 </style>
+
 <!--a style="position:absolute; top:20px; right:20px;"href="/logout">Log out</a-->
-<a style="position:absolute; top:20px; right:20px;">Good luck getting past me...</a>
+<a id="fruh" style="position:absolute; top:20px; right:20px;">loading hehe...</a>
 
 <head>
 <title>waiting on my html pages >:]</title>
 </head>
+
+<script>
+    
+    var nothing = "Good luck getting past me..."
+    
+    document.getElementById("fruh").innerHTML = nothing
+    document.getElementById("fruh").className = "fire"
+    
+</script>
 
 <img id="logo" src="{% static 'doge.png' %}" alt="doge" />
 

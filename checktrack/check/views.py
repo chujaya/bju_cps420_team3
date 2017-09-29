@@ -25,6 +25,13 @@ class ResultsView(generic.DetailView):
     model = Question
     template_name = 'check/results.html'
 
+def main(request):
+    template = loader.get_template('check/main.html')
+    context = {
+        "template": template
+    }
+    return HttpResponse(template.render(context, request))
+
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]

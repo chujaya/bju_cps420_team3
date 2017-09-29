@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^check/', include('check.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^main/', check.views.main, name='main'),
+    
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -32,6 +32,13 @@ def main(request):
     }
     return HttpResponse(template.render(context, request))
 
+def home(request):
+    template = loader.get_template('check/home.html')
+    context = {
+        "template": template
+    }
+    return HttpResponse(template.render(context, request))
+
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]

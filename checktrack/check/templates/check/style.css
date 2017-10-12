@@ -27,7 +27,7 @@
 
 .button:hover{
 	background: green;
-	width: 75%;
+	width: 30%;
 	transition: width 1s;
 }
 

@@ -28,7 +28,7 @@
 .button:hover{
 	background: green;
 	width: 30%;
-	transition: width 1s;
+	transition: width .25s;
 }
 
 input[type=text]{

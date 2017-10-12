@@ -1,0 +1,43 @@
+#center{
+	text-align: center;
+	padding-left: 25%;
+	padding-right: 25%;
+	}
+	
+#form{
+	padding: 2em;
+	border-style: solid;
+    border-width: 2px;
+}	
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	transition: width 1s;
+	width: 25%;
+}
+
+.button:hover{
+	background: green;
+	width: 75%;
+	transition: width 1s;
+}
+
+input[type=text]{
+	width: 25%;
+	transition: width 1s;
+	border: 2px solid;
+	border-style: rounded;
+}
+
+input[type=text]:focus{
+	width: 75%;
+}

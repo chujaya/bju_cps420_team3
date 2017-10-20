@@ -1,13 +1,10 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
-
-<script>
-	console.log("this is just a test")
-</script>
-
 <head>
-	 <link rel="stylesheet" type="text/css" href="style.css">
+	 <link rel="stylesheet" type="text/css" href="{% static "mainstyle.css" %}">
 </head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +17,71 @@
 
 	<div id="form">
 		<input class="fa fa-search" type="text" name="search" placeholder="Search..."><br/><br/>
+
+		<button class="button" id="checkModal">Insert </button><br/><br/>
 		
-		<a href="/home"><button class="button">Insert </button></a><br/><br/>
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+			<div class="modal-content">
+			<span class="close">&times;</span>
+			<div>
+				<form>
+					Name:
+					<input type="text" name="custname"><br/><br/>
+					Check Number:
+					<input type="number" name="checkno"><br/><br/>
+					Date:
+					<input type="date" name="date"><br/>
+				</form>
+			</div><hr>
+				<div class="modal-footer">
+					<form>
+						<button class="modal-footer-button">Insert</button>
+						<button class="modal-footer-button">Cancel</button>
+						<button class="modal-footer-button">Clear</button>
+					</form>
+				</div>
+			</div>
+			
+
+		</div>
 
 		<a href="https://www.foxnews.com"><button class="button">Update </button></a><br/><br/>
 
 		<a href="#" onClick="alert('You Have Insufficient Permissions!');"><button class="button">Delete </button></a><br/><br/>
 	</div>
+
+	<script>
+	//retrieves the modal
+	var modal = document.getElementById('myModal');
+	
+	//gets the button that opens the modal 
+	var btn = document.getElementById("checkModal");
+	
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on the button, open the modal 
+	btn.onclick = function() {
+    modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+    modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+		}
+	}
+	</script>
+
 </div>	
 
 </body>

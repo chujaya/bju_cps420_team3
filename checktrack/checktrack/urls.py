@@ -12,11 +12,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^admin/', admin.site.urls),
     url(r'^main/', check.views.main, name='main'),
-    url(r'^home/', check.views.home, name="home"),
-<<<<<<< HEAD
-    url(r'^accounts/', include('django.contrib.auth.urls')),
-=======
->>>>>>> 02e3e90ba91fb3e9ab02222ab25ad8bcf7af5e6e
+    url(r'^home/', check.views.home, name="home")
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

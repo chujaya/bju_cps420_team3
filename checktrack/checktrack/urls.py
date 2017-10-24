@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^admin/', admin.site.urls),
     url(r'^main/', check.views.main, name='main'),
-    url(r'^home/', check.views.home, name="home"),
+    url(r'^home/', check.views.home, name="home")
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

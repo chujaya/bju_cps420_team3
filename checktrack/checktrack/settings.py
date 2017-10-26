@@ -55,7 +55,7 @@ ROOT_URLCONF = 'checktrack.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,6 +127,8 @@ STATICFILES_DIRS = [
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_cdn')
+
+LOGIN_REDIRECT_URL = '/'
 
 print(BASE_DIR)
 print(STATIC_ROOT)

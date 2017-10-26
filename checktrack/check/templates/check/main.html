@@ -1,7 +1,15 @@
-{% load static %}
+{% extends "check/base.html" %}
 
-<!DOCTYPE html>
-<html>
+{% block main %}
+
+{% if user.is_authenticated %}
+<p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+<p>Welcome, new user. Please log in.</p>
+{% endif %}
+
+
+{% load static %}
 
 <head>
 	 <link rel="stylesheet" type="text/css" href="{% static "mainstyle.css" %}">
@@ -86,3 +94,6 @@
 
 </body>
 </html>
+
+{% endblock %}
+
